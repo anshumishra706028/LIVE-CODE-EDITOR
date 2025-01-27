@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Code EDitor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="left">
+            <label><i class="fa-brands fa-html5"></i> HTML</label>
+            <textarea id="html-code" onkeyup="run()"></textarea>
+
+            <label><i class="fa-brands fa-css3-alt"></i> CSS</label>
+            <textarea id="css-code" onkeyup="run()"></textarea>
+
+            <label><i class="fa-brands fa-js"></i> JAVASCRIPT</label>
+            <textarea id="js-code" onkeyup="run()"></textarea>
+        </div>
+        <div class="right">
+            <label><i class="fa-solid fa-play"></i> Output</label>
+            <iframe id="Output"></iframe>
+        </div>
+    </div>
+    <script>
+        function run(){
+            let htmlcode = document.getElementId("html-code");.value
+            let csscode = document.getElementId("css-code");.value
+            let jscode = document.getElementId("js-code");.value
+            let Output = document.getElementId("Output");
+
+            Output.contentDocument.body.innerHTML = htmlcode+"<style>" +csscode +"</style"
+            Output.contentWindow.eval(jscode);    
+        }
+    </script>
+</body>
+</html>
